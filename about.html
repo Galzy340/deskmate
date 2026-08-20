@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | DeskMate</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800 flex flex-col min-h-screen">
+
+    <nav class="bg-white shadow-md p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-blue-600">DeskMate</a>
+            <div class="hidden md:flex space-x-6">
+                <a href="index.html" class="hover:text-blue-500">Home</a>
+                <a href="katalog.html" class="hover:text-blue-500">Catalog</a>
+                <a href="about.html" class="text-blue-600 font-semibold">About</a>
+                <a href="contact.html" class="hover:text-blue-500">Contact</a>
+            </div>
+            <button id="mobile-menu-btn" class="md:hidden font-bold text-xl">☰</button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden flex-col bg-white mt-2 p-4 space-y-3 shadow-inner">
+            <a href="index.html" class="block hover:text-blue-500">Home</a>
+            <a href="katalog.html" class="block hover:text-blue-500">Catalog</a>
+            <a href="about.html" class="block text-blue-600 font-semibold">About</a>
+            <a href="contact.html" class="block hover:text-blue-500">Contact</a>
+        </div>
+    </nav>
+
+    <main class="container mx-auto p-6 flex-grow flex items-center justify-center">
+        <div class="max-w-2xl text-center">
+            <h2 class="text-3xl font-bold mb-6">Tentang DeskMate</h2>
+            <img src="img/about.jpg" alt="Tim DeskMate" class="w-full h-64 object-cover rounded-lg shadow-md mb-6 bg-gray-200">
+            <p class="text-gray-600 text-lg leading-relaxed mb-4">
+                Berawal dari keluhan setup meja yang membosankan, kami hadir untuk memberikan solusi alas meja (deskmat) berkualitas tinggi. 
+                Produk kami dirancang khusus untuk kenyamanan mengetik, presisi mouse untuk gaming dan coding, serta mendongkrak estetika ruang kerja Anda.
+            </p>
+        </div>
+    </main>
+
+    <footer class="bg-gray-900 text-white text-center p-6 mt-12">
+        <p>&copy; 2026 DeskMate. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', () => { menu.classList.toggle('hidden'); menu.classList.toggle('flex'); });
+    </script>
+</body>
+</html>
